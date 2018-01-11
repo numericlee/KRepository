@@ -28,8 +28,10 @@ The python code generated a series of csv files, one for each region.  Combiner.
 
 ## Data Files ##
 
-Vertices5 – coordinates of each zone in front view; views to be utilized
+Vertices5 – coordinates of each zone in front view; views to be utilized.
+
 Phase Moons -geometric inputs used to calculate coordinates in other views
+
 Inventories of Passengers and PZ files
 
 Model Files: The main model files were not uploaded due to GitHub space limitations. The model outputs were generally 500MB – 1GB per region
