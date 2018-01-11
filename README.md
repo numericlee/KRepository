@@ -26,7 +26,7 @@ The workflow is a series of batch processes.  The workflow was developed after a
 
 The python code generated a series of csv files, one for each region.  Combiner.bat combines these. Some minor editing is needed to make this submission-ready (e.g. remove redundant “ID, prediction” and remove EOL character
 
-## Data Inputs ##
+## Data Files ##
 
 Vertices5 – coordinates of each zone in front view; views to be utilized
 Phase Moons -geometric inputs used to calculate coordinates in other views
