@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Nov 24 22:52:29 2017
-@author: Walzer
 """
 #Inference Code
 
