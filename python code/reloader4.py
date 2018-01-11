@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-#get passgrlabel2 needs df for code7
 
 from __future__ import print_function, division
 import numpy as np, os,re 
@@ -1152,4 +1151,3 @@ with tf.Graph().as_default():
     
     viewCombiner(Threat_Rgn)
 
->>>>>>> 22f1a8e454425c2160add7f14e9f2915e5913a6e
