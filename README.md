@@ -1,18 +1,18 @@
- **Project Overview**
+ # Project Overview #
  
 This project includes a series of programs used to predict the likelihood an airline passenger is carrying contraband in each of 17 body zones. The methodology is an ensemble based on several tensor flow machine learning models combined with some heuristic algorithms utilizing morphological transformations
 
 The project is based on a contest sponsored by Homeland security with $1.5 million of prize money and hosted by Kaggle. https://www.kaggle.com/c/passenger-screening-algorithm-challenge
 My solution, based on an ensemble of machine learning models using the tensor flow library, placed 54th out of 518 entrants
 
-**Data Source**
+## Data Source ##
 
 The TSA supplies data in several formats. Our algorithms reply on the A3DAPS images. 64 images are offered, each corresponding to a camera angle 1/64th of a degree apart. We utilize 8 images, corresponding to the front, rear, and 6 side views spaced at equal intervals.
 Stage1 of the contest involved 1247 passengers (of which 100 initially had hidden labels.) Stage2 had 1388 passengers. Data was provided by the TSA via Google Cloud Buckets and exceeded 4 Terabytes
 
 Note that the raw data supplied by Homeland Security is confidential and cannot be shared
 
-**Workflow**
+## Workflow ##
 
 The workflow is a series of batch processes.  The workflow was developed after a month of analysis and a variety of exploratory studies. The major steps are:
 
@@ -26,7 +26,7 @@ The workflow is a series of batch processes.  The workflow was developed after a
 
 The python code generated a series of csv files, one for each region.  Combiner.bat combines these. Some minor editing is needed to make this submission-ready (e.g. remove redundant “ID, prediction” and remove EOL character
 
-**Data Inputs**
+## Data Inputs ##
 
 Vertices5 – coordinates of each zone in front view; views to be utilized
 Phase Moons -geometric inputs used to calculate coordinates in other views
