@@ -3,7 +3,7 @@
 This project includes a series of programs used to predict the likelihood an airline passenger is carrying contraband in each of 17 body zones. The methodology is an ensemble based on several tensor flow machine learning models combined with some heuristic algorithms utilizing morphological transformations
 
 The project is based on a contest sponsored by Homeland security with $1.5 million of prize money and hosted by Kaggle. https://www.kaggle.com/c/passenger-screening-algorithm-challenge
-My solution, based on an ensemble of machine learning models using the tensor flow library, placed 54th out of 518 entrants
+Our solution, based on an ensemble of machine learning models using the tensor flow library, placed 54th out of 518 entrants
 
 ## Data Source ##
 
