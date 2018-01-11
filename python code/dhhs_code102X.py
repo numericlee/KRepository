@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-#v99 has forearms to 210. vertices_5 eliminates arm views 16 and 48
-
 from __future__ import print_function, division
 import numpy as np, os, csv, time, re
 import cv2, pandas as pd
