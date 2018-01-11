@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-#v99 has forearms to 210. vertices_5 eliminates arm views 16 and 48
 
 from __future__ import print_function, division
 import numpy as np, os, csv, time, re
@@ -4107,11 +4106,3 @@ elif control==17:
         
         viewCombiner(Threat_Rgn)
 
-
-
-
-
-    
-    
-    
->>>>>>> 22f1a8e454425c2160add7f14e9f2915e5913a6e
