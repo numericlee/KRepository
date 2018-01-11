@@ -2,12 +2,12 @@
  
 This project includes a series of programs used to predict the likelihood an airline passenger is carrying contraband in each of 17 body zones. The methodology is an ensemble based on several tensor flow machine learning models combined with some heuristic algorithms utilizing morphological transformations
 
-The project is based on a contest sponsored by Homeland security with $1.5 million of prize money and hosted by Kaggle. https://www.kaggle.com/c/passenger-screening-algorithm-challenge
+The project is based on a contest sponsored by The Department of Homeland Security (TSA) with $1.5 million of prize money and hosted by Kaggle. https://www.kaggle.com/c/passenger-screening-algorithm-challenge
 Our solution, based on an ensemble of machine learning models using the tensor flow library, placed 54th out of 518 entrants
 
 ## Data Source ##
 
-The TSA supplies data in several formats. Our algorithms reply on the A3DAPS images. 64 images are offered, each corresponding to a camera angle 1/64th of a degree apart. We utilize 8 images, corresponding to the front, rear, and 6 side views spaced at equal intervals.
+The TSA supplies data in several formats. Our algorithms rely on the A3DAPS images. 64 images are offered, each corresponding to a camera angle 1/64th of a degree apart. We utilize 8 images, corresponding to the front, rear, and 6 side views spaced at equal intervals.
 Stage1 of the contest involved 1247 passengers (of which 100 initially had hidden labels.) Stage2 had 1388 passengers. Data was provided by the TSA via Google Cloud Buckets and exceeded 4 Terabytes
 
 Note that the raw data supplied by Homeland Security is confidential and cannot be shared
@@ -16,7 +16,7 @@ Note that the raw data supplied by Homeland Security is confidential and cannot 
 
 The workflow is a series of batch processes.  The workflow was developed after a month of analysis and a variety of exploratory studies. The major steps are:
 
-1) Preprocess the images (crop, normalize, grayscale) followed by extraction of 17 zone images. The extraction was based on a single set of coordinates for the approximate position and depth of each zone relative to the overall subject in each camera angle. This was followed by re-cropping.  Some zones were flipped (Horizontal symmetry.)  There is code to straighten forearms and upper arms to a vertical position to facilitate machine learning, but in the final version these methods were abandoned.  The process generated over 130,000 ZoneView files, (roughly 106 per passenger) in .csv format for further analysis. The relevant code can be found in code block 4 of DHHS (except for arms code block 5)
+1) Preprocess the images (crop, normalize, grayscale) followed by extraction of 17 zone images. The extraction was based on a single set of coordinates for the approximate position and depth of each zone relative to the overall subject in each camera angle. This was followed by re-cropping.  Some zones were flipped (Horizontal symmetry.)  There is code to straighten forearms and upper arms to a vertical position to facilitate machine learning, but in the final version these methods were abandoned.  The process generated over 130,000 ZoneView files in Stage I alone, (roughly 106 per passenger) in .csv format for further analysis. The relevant code can be found in code block 4 of DHHS (except for arms code block 5)
 
 2) Perform a series of computations on the ZoneView files.  Some of these computations were intended to detect specific patterns (e.g.  a lighter shape of specified size enclosed by a darker shape of specified size.) Others looked for unusual and unnatural variations.  48 key metrics were identified. In stage 1, the results of these computations were compared against the known passenger labels using a logistic regression and the resulting model was saved in a .pkl file. The relevant code can be found in code block 10 of DHHS 
 
