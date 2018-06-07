@@ -1,9 +1,10 @@
 '''
-this version from first round of Kaggle Contest includes some preprocessing functions
+this version from first round of Kaggle contest includes some preprocessing functions
 excluded from version 103
 a previous version had forearms to 210. 
 vertices_5 eliminates arm views 16 and 48
 '''
+
 
 from __future__ import print_function, division
 import numpy as np, os, csv, time, re
